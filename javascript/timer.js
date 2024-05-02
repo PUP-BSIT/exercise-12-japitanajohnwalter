@@ -1,11 +1,11 @@
-var timer = document.getElementById("timer");
-var start = document.getElementById("start");
-var pause = document.getElementById("pause");
-var resume = document.getElementById("resume");
-var stop = document.getElementById("stop");
-var id;
-var value = "0";
-var s = 0;
+let timer = document.getElementById("timer");
+let start = document.getElementById("start");
+let pause = document.getElementById("pause");
+let resume = document.getElementById("resume");
+let stop = document.getElementById("stop");
+let id;
+let value = "0";
+let s = 0;
 
 function startTimer() {
     timer.textContent = s ;
