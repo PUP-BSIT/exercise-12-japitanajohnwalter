@@ -12,23 +12,27 @@ function startTimer() {
 
     s++;
 
-    id = setTimeout(function () {
-        startTimer()
-    }, 1000);
+    id = setTimeout(startTimer, 1000);
 
     start.disabled = true;
     pause.disabled = false;
-    resume.disabled = false;
+    resume.disabled = true;
     stop.disabled = false;
 }
 
 function pauseTimer() {
     value = timer.textContent;
     clearTimeout(id);
+
+    pause.disabled = true;
+    resume.disabled = false;
 }
 
 function resumeTimer() {
     startTimer();
+
+    pause.disabled = false;
+    resume.disabled = true;
 }
 
 function stopTimer() {
